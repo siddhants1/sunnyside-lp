@@ -8,6 +8,8 @@ body {
     box-sizing: border-box;
 }
 
+/* -------------------------------------------------------------------------------------- */
+
 /* ----- HEADER STYLING BEGINS ------- */
 
 header {
@@ -68,7 +70,97 @@ header h1 {
     letter-spacing: 0.5rem;
 }
 
-/* xxxxxxxxxxx HEADER STYLING BEGINS xxxxxxxxxxx */
+.header-arrow-down {
+    text-align: center;
+}
+
+.header-arrow-down img {
+    margin-top: 1.5rem;
+}
+
+/* xxxxxxxxxxx HEADER STYLING ENDS xxxxxxxxxxx */
+
+/* -------------------------------------------------------------------------------------- */
+
+/* -------- MAIN GRID SECTION BEGINS --------- */
+
+/* Grid Definition: Follows immediately*/
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "main-one main-two"
+    "main-three main-four"
+    "main-five main-six";
+}
+
+/* Grid Items: Follow immediately*/
+
+.main-grid-text-holder {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(167, 40%, 24%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-grid-box-one {
+    grid-area: main-one;
+    text-align: center;
+    padding: 3rem;
+}
+
+.main-grid-box-two {
+    grid-area: main-two;
+}
+
+.main-grid-box-two img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-grid-box-three {
+    grid-area: main-three;
+}
+
+.main-grid-box-three img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-grid-box-four {
+    grid-area: main-four;
+    text-align: center;
+    padding: 3rem;
+}
+
+.main-grid-box-five {
+    grid-area: main-five;
+    background: url("../images/assets/image-graphic-design.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 400px;
+    color: hsl(167, 40%, 24%);
+    text-align: center;
+}
+
+.main-grid-box-six {
+    grid-area: main-six;
+    background: url("../images/assets/image-photography.jpg") no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    color: hsl(198, 62%, 26%);
+    text-align: center;
+}
+
+.grid-box-five-six-text {
+    margin-top: 21rem;
+}
+
+/* xxxxxxxx MAIN GRID SECTION ENDS xxxxxxxxxx */
+
+/* -------------------------------------------------------------------------------------- */
 
 /* --------- MEDIA QUERIES BEGIN ---------- */
 
@@ -82,7 +174,7 @@ header h1 {
         color: gray;
         max-height: 14.0625em;
         transform: translateX(120%);
-        transition: transform 300ms ease-out;
+        transition: transform 250ms ease-out;
     }    
 
     .primary-navigation[data-visible="true"] {
@@ -105,6 +197,36 @@ header h1 {
         right: 1.5rem;
         border: none;
     }
+
+    .nav-contacts {
+        background-color: yellow;
+        color: black;
+        text-align: center;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        font-weight: bold;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "main-one"
+        "main-two"
+        "main-three"
+        "main-four"
+        "main-five"
+        "main-six";
+    }
+    
+    .main-grid-box-six {
+        grid-area: main-six;
+        background: url("../images/assets/image-photography.jpg") no-repeat center center;
+        background-size: cover;
+        min-height: 400px;
+        color: hsl(198, 62%, 26%);
+        text-align: center;
+    }    
     
 }
 
