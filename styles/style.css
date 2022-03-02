@@ -162,6 +162,122 @@ main {
 
 /* -------------------------------------------------------------------------------------- */
 
+/* -------- TESTIMONIALS CSS BEGINS ---------- */
+
+section h3 {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.testimonials-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "one two three";
+    justify-items: center;
+}
+
+.testimonial-one {
+    grid-area: one;
+}
+
+.testimonial-two {
+    grid-area: two;
+}
+
+.testimonial-three {
+    grid-area: three;
+}
+
+.testimonial {
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.testimonial-image img {
+    border-radius: 50%;
+}
+
+/* xxxxxxx TESTIMONIALS CSS ENDS xxxxxxxxxxxx */
+
+/* -------------------------------------------------------------------------------------- */
+
+/* --------- BOTTOM IMAGES GRID CSS BEGINS ---------- */
+
+.bottom-images-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "bottom-image-one bottom-image-two bottom-image-three bottom-image-four";
+}
+
+.bottom-images-container-one {
+    grid-area: bottom-image-one;
+}
+
+.bottom-images-container-two {
+    grid-area: bottom-image-two;
+}
+
+.bottom-images-container-three {
+    grid-area: bottom-image-three;
+}
+
+.bottom-images-container-four {
+    grid-area: bottom-image-four;
+}
+
+.bottom-image-group img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* xxxxxxxxxx BOTTOM IMaGES GRID CSS ENDS xxxxxxxxxx */
+
+/* -------------------------------------------------------------------------------------- */
+
+/* ----------- FOOTER CSS BEGINS ----------------- */
+
+footer {
+    background-color: hsl(167, 40%, 24%);
+    color: hsla(113, 99%, 70%, 0.911);
+    text-align: center;
+    padding: 1rem;
+}
+
+footer h3 {
+    margin: 0 0.5rem;
+}
+
+.footer-nav-links span {
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.footer-nav-links span:hover {
+    color: rgb(255, 60, 0);
+}
+
+.footer-social-icons {
+    margin-bottom: 0;
+}
+
+.footer-social-icons span {
+    margin: 2rem;
+    cursor: pointer;
+}
+
+.footer-social-icons span:hover {
+    color: rgba(255, 255, 0, 0.822);
+}
+
+/* xxxxxxxxxxx FOOTER CSS BEGINS xxxxxxxxxxxxxxxx */
+
+/* -------------------------------------------------------------------------------------- */
+
 /* --------- MEDIA QUERIES BEGIN ---------- */
 
 @media (max-width: 650px) {
@@ -227,7 +343,30 @@ main {
         color: hsl(198, 62%, 26%);
         text-align: center;
     }    
+
+    .testimonials-container {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "one"
+        "two"
+        "three";
+        justify-items: center;
+    }
+    
+    .bottom-images-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "bottom-image-one"
+        "bottom-image-two"
+        "bottom-image-three"
+        "bottom-image-four";
+    }    
     
 }
 
 /* xxxxxxxxxx MEDIA QUERIES END xxxxxxxxxx */
+
+/* -------------------------------------------------------------------------------------- */
