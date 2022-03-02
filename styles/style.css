@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: 'Barlow', sans-serif;
+    height: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+/* ----- HEADER STYLING BEGINS ------- */
+
+header {
+    position: relative;
+    background: url("../images/assets/image-header.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+    min-height: 34.375em;
+    color: hsl(0, 0%, 100%);
+}
+
+/* --------- Nav and Nav Container Styling Starts ----------- */
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.nav-and-title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-and-title-container > span {
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.primary-navigation {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-and-title-container nav ul li {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.nav-and-title-container nav ul li:hover {
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* xxxxxxxxxx Nav and Nav Container Styling Ends xxxxxxxxxxxx */
+
+header h1 {
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    letter-spacing: 0.5rem;
+}
+
+/* xxxxxxxxxxx HEADER STYLING BEGINS xxxxxxxxxxx */
+
+/* --------- MEDIA QUERIES BEGIN ---------- */
+
+@media (max-width: 650px) {
+    .primary-navigation {
+        position: fixed;
+        z-index: 1;
+        inset: 6% 5% 0 5%;
+        background-color: hsl(0, 0%, 100%);
+        flex-direction: column;
+        color: gray;
+        max-height: 14.0625em;
+        transform: translateX(120%);
+        transition: transform 350ms ease-out;
+    }    
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .nav-and-title-container nav ul li {
+        font-size: 1.1rem;
+        margin: 0.2rem auto;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        background: url(../images/icon-hamburger.svg) no-repeat;
+        width: 1.5rem;
+        aspect-ratio: 1;
+        top: 1.5rem;
+        right: 1.5rem;
+        border: none;
+    }
+    
+}
+
+/* xxxxxxxxxx MEDIA QUERIES END xxxxxxxxxx */
