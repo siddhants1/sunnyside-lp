@@ -82,7 +82,7 @@ header h1 {
         color: gray;
         max-height: 14.0625em;
         transform: translateX(120%);
-        transition: transform 350ms ease-out;
+        transition: transform 300ms ease-out;
     }    
 
     .primary-navigation[data-visible="true"] {
