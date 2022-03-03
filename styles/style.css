@@ -290,7 +290,7 @@ footer h3 {
         color: gray;
         max-height: 14.0625em;
         transform: translateX(120%);
-        transition: transform 250ms ease-out;
+        transition: transform 100ms ease-out;
     }    
 
     .primary-navigation[data-visible="true"] {
